@@ -1,0 +1,76 @@
+.stores-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 8px; /* rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* softer shadow */
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.stores-table th,
+.stores-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+.stores-table th {
+  background: linear-gradient(90deg, #f9f9f9, #f1f1f1);
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stores-table tr:hover {
+  background-color: #f9fcff; /* subtle hover highlight */
+  transition: background 0.2s ease-in-out;
+}
+
+.manage-btn,
+.leave-btn,
+.dashboard-btn,
+.delete-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.dashboard-btn {
+  background: #28a745;
+  color: #fff;
+}
+.dashboard-btn:hover {
+  background: #218838;
+}
+
+.manage-btn {
+  background: #0078d4;
+  color: #fff;
+}
+.manage-btn:hover {
+  background: #005a9e;
+}
+
+.leave-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+.leave-btn:hover {
+  background: #c0392b;
+}
+
+.delete-btn {
+  background: hsl(357, 95%, 48%);
+  color: #fff;
+}
+.delete-btn:hover {
+  background: #e68900;
+}

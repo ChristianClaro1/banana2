@@ -1,0 +1,26 @@
+/* Styles for navigation links */
+.auth-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.auth-links a {
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.auth-links a:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,203 @@
+/* Global Layout */
+.dashboard {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f6fa;
+  /* Sidebar is centralized in Layout; per-page sidebar styles removed */
+  border-radius: 6px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.nav-icon span {
+  font-size: 0.95rem;
+}
+
+.nav-icon:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-icon.active {
+  background-color: #e3faf3;
+  color: #0f9e6d;
+  font-weight: 600;
+}
+
+/* ====================== MAIN CONTENT ====================== */
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Ensure the page root doesn't force an extra viewport-height scroll
+   when used inside the layout's scrolling container. */
+.dashboard {
+  width: 100%;
+}
+
+/* ====================== TOP BAR ====================== */
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topbar-logo {
+  width: 38px;
+  height: 38px;
+}
+
+.top-bar input {
+  width: 18rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  background-color: #fafafa;
+  font-size: 0.9rem;
+}
+
+.top-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.top-icons span {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* ====================== SALES SUMMARY ====================== */
+
+.sales-summary h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.summary-cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  min-width: 12rem;
+  flex: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  font-weight: 600;
+  color: #444;
+}
+
+/* ====================== SALES RECORD ====================== */
+
+.sales-record {
+  margin-top: 2rem;
+}
+
+.sales-record h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.record-details {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.record-amount {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.chart-container {
+  flex: 1;
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  height: 320px;
+}
+
+/* chart mode toggle removed - no button styles needed */
+
+/* ====================== POPULAR PRODUCTS ====================== */
+
+.popular-products {
+  margin-top: 2rem;
+}
+
+.popular-products .product-list {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  min-width: 11rem;
+  flex: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  font-size: 0.95rem;
+}
+
+.product-card p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ====================== RECENT ORDERS ====================== */
+
+.recent-orders {
+  margin-top: 2rem;
+}
+
+.recent-orders table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.recent-orders th {
+  background-color: #f8f8f8;
+  padding: 0.9rem;
+  text-align: left;
+  font-weight: 600;
+  color: #444;
+}
+
+.recent-orders td {
+  padding: 0.85rem;
+  border-bottom: 1px solid #ececec;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.recent-orders tr:last-child td {
+  border-bottom: none;
+}

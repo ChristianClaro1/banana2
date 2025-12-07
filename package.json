@@ -1,0 +1,33 @@
+{
+  "name": "pointsale",
+  "version": "1.0.0",
+  "description": "Final Output for ITMC311",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ping2023A/POINTSALE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ping2023A/POINTSALE/issues"
+  },
+  "homepage": "https://github.com/Ping2023A/POINTSALE#readme",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "chart.js": "^4.5.1",
+    "concurrently": "^9.2.1",
+    "firebase": "^12.5.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.9.5"
+  }
+}

@@ -1,0 +1,269 @@
+/* Inherit global layout styles from order.css */
+.pos-container {
+  display: flex;
+}
+
+/* Sidebar is centralized in Layout; per-page sidebar styles removed */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.header-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-profile {
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+.search-add-container {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 250px;
+  font-size: 14px;
+}
+
+.add-item-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-item-button:hover {
+  background-color: #0056b3;
+}
+
+.inventory-table-container {
+  overflow-x: auto;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  gap: 12px;
+}
+
+.controls-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.control-label { font-weight: 600; margin-right: 6px; }
+
+.filter-chips { display: flex; gap: 8px; }
+.chip {
+  padding: 6px 10px;
+  border-radius: 16px;
+  background: #f2f2f2;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  font-size: 13px;
+}
+.chip.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-table th,
+.inventory-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.th-sortable { cursor: pointer; user-select: none; }
+.th-sortable.sorted { background:#f0f8ff; }
+
+/* Fade animation when filtered results update */
+.table-fade {
+  animation: fadeIn .26s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.inventory-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.inventory-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.inventory-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2200;
+  padding: 18px;
+}
+
+.inventory-modal-content {
+  background-color: white;
+  padding: 28px 28px;
+  border-radius: 10px;
+  min-width: 420px;
+  max-width: 96%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.inventory-modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.inventory-modal-content .form-group {
+  margin-bottom: 16px;
+}
+
+.inventory-modal-content .form-group label {
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 600;
+}
+
+.inventory-modal-content input,
+.inventory-modal-content select,
+.inventory-modal-content textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.inventory-modal-content .modal-buttons {
+  margin-top: 14px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-buttons button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.modal-buttons button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Action buttons in table */
+.action-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.icon-btn:hover {
+  background: #f0f0f0;
+}
+
+.icon-btn.delete {
+  color: #a00;
+}
+
+.modal-delete {
+  background-color: #a00;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Inline validation styles (similar to roles) */
+.field-error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: -6px;
+  margin-bottom: 8px;
+}
+
+.form-error {
+  color: #c0392b;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 8px 0;
+}
